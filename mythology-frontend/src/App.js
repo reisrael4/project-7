@@ -5,21 +5,39 @@ import axios from "axios";
 const mythologyUrl = "https://mythology-api.herokuapp.com/list";
 
 class App extends Component {
-
-  componentDidMount(){
-    axios.get(mythologyUrl).then(res => {
-      console.log(res);
-    })
+  constructor() {
+    super();
+    this.state = {
+      data: null
+    };
   }
 
-  render(){
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello World.</p>
-      </header>
-    </div>
-  );
+  componentDidMount() {
+    axios.get(mythologyUrl).then(res => {
+      this.setState({ data: res.data });
+      console.log(res);
+      console.log(this.state.data);
+    });
+  }
+
+  render() {
+    if (this.state.data == null) {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <p>Hello World.</p>
+          </header>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <p>{this.state.data[0].en_name}</p>
+          </header>
+        </div>
+      );
+    }
   }
 }
 
