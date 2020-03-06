@@ -2,10 +2,14 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 
-class App extends Component() {
+const mythologyUrl = "https://mythology-api.herokuapp.com/list";
+
+class App extends Component {
 
   componentDidMount(){
-    
+    axios.get(mythologyUrl).then(res => {
+      console.log(res);
+    })
   }
 
   render(){
