@@ -1,7 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
+import axios from "axios";
 
-function App() {
+class App extends Component() {
+
+  componentDidMount(){
+    
+  }
+
+  render(){
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +16,7 @@ function App() {
       </header>
     </div>
   );
+  }
 }
 
 export default App;
