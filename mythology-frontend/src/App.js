@@ -33,7 +33,9 @@ class App extends Component {
       return (
         <div className="App">
           <header className="App-header">
-            <p>{this.state.data[0].en_name}</p>
+            <p>{this.state.data[3].en_name}</p>
+            <p>{this.state.data[3].desc}</p>
+            {/* <img src= {this.state.data[3].thumbnail}></img> */}
           </header>
         </div>
       );
