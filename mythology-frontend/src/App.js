@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import Container from "@material-ui/core/Container";
+import Header from "./Header/Header";
 import axios from "axios";
 
 const mythologyUrl = "https://mythology-api.herokuapp.com/list";
@@ -23,21 +25,23 @@ class App extends Component {
   render() {
     if (this.state.data == null) {
       return (
-        <div className="App">
-          <header className="App-header">
+        <Container className="App">
+          {Header}
+          <div className="App-header">
             <p>Hello World.</p>
-          </header>
-        </div>
+          </div>
+        </Container>
       );
     } else {
       return (
-        <div className="App">
-          <header className="App-header">
+        <Container className="App">
+          <Header />
+          <div className="App-header">
             <p>{this.state.data[3].en_name}</p>
             <p>{this.state.data[3].desc}</p>
             {/* <img src= {this.state.data[3].thumbnail}></img> */}
-          </header>
-        </div>
+          </div>
+        </Container>
       );
     }
   }
