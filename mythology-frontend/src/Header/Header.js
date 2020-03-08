@@ -11,11 +11,7 @@ function Header(props) {
   return (
     <header>
       <Toolbar className="toolbar">
-        <Typography
-          component="h2"
-          variant="h2"
-          className="toolbarTitle"
-        >
+        <Typography component="h2" variant="h2" className="toolbarTitle">
           Virgil
         </Typography>
         <IconButton>

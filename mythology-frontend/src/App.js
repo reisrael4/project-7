@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Container from "@material-ui/core/Container";
-import Header from "./Header/Header";
+import Home from './Home/Home';
 
 
 class App extends Component {
@@ -13,10 +12,7 @@ class App extends Component {
   }
 render(){
   return (
-    <Container className="App">
-      <Header />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Virgil_.jpg" className='virgil'></img>
-    </Container>
+    <Home />
   );
 }
   
