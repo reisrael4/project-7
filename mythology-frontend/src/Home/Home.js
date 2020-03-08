@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
 import Header from "../Header/Header";
-import { Link, Route } from "react-router-dom";
 import './Home.css'
 
 

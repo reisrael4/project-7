@@ -5,7 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
 import "typeface-roboto";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header(props) {
   return (
