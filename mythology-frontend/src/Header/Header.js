@@ -4,6 +4,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
+import "typeface-roboto";
 import { Link } from "react-router-dom";
 
 function Header(props) {
@@ -11,8 +12,9 @@ function Header(props) {
     <header>
       <Toolbar className="toolbar">
         <Typography
-          component="div"
-          className='toolbarTitle'
+          component="h2"
+          variant="h2"
+          className="toolbarTitle"
         >
           Virgil
         </Typography>

@@ -15,7 +15,7 @@ render(){
   return (
     <Container className="App">
       <Header />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Virgil_.jpg"></img>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Virgil_.jpg" className='virgil'></img>
     </Container>
   );
 }
