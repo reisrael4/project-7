@@ -35,7 +35,7 @@ class Works extends Component {
       let list = this.state.data.map(entity => {
         if (entity.works.includes("georgics")) {
           return (
-            <Container className="entity">
+            <Container className="entity" key={entity.works}>
               <Header />
               <div className="entity-content">
                 <p>{entity.en_name}</p>
@@ -47,7 +47,7 @@ class Works extends Component {
         }
         if (entity.works.includes("eclogues")) {
           return (
-            <Container className="entity">
+            <Container className="entity" key={entity.works}>
               <Header />
               <div className="entity-content">
                 <p>{entity.en_name}</p>
@@ -59,7 +59,7 @@ class Works extends Component {
         }
         if (entity.works.includes("aeneid")) {
           return (
-            <Container className="entity">
+            <Container className="entity" key={entity.works}>
               <Header />
               <div className="entity-content">
                 <p>{entity.en_name}</p>
@@ -71,7 +71,7 @@ class Works extends Component {
         }
         if (entity.works == []) {
           return (
-            <Container className="entity">
+            <Container className="entity" key={entity.works}>
               <Header />
               <div className="entity-content">
                 <p>{entity.en_name}</p>

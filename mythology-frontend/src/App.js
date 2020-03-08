@@ -9,10 +9,10 @@ class App extends Component {
     return (
       <div>
         <Route path="/" component={Home} />
-        <Route path="/list/work/georgics" component={Works} />
+        {/* <Route path="/list/work/georgics" component={Works} />
         <Route path="/list/work/eclogues" component={Works} />
         <Route path="/list/work/aeneid" component={Works} />
-        <Route path="/list/work/unaffiliated" component={Works} />
+        <Route path="/list/work/unaffiliated" component={Works} /> */}
       </div>
     );
   }
