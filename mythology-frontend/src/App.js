@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Home from './Home/Home';
-
+import Home from "./Home/Home";
+import { Route } from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -10,12 +10,9 @@ class App extends Component {
       data: null
     };
   }
-render(){
-  return (
-    <Home />
-  );
-}
-  
+  render() {
+    return <Route path="/" component={Home} />;
+  }
 }
 
 export default App;
