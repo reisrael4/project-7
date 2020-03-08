@@ -5,7 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
 import "typeface-roboto";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
 function Header(props) {
   return (
@@ -20,10 +20,10 @@ function Header(props) {
       </Toolbar>
       <Toolbar component="nav" variant="dense" className="toolbarSecondary">
         {" "}
-        <div>Georgics</div>
-        <div>Eclogues</div>
-        <div>Aeneid</div>
-        <div>Unaffiliated</div>
+        <Link to="/list/work/georgics">Georgics</Link>
+        <Link to="/list/work/eclogues">Eclogues</Link>
+        <Link to="/list/work/aeneid">Aeneid</Link>
+        <Link to="/list/work/unaffiliated">Unaffiliated</Link>
       </Toolbar>
     </header>
   );
