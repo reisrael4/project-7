@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Container from "@material-ui/core/Container";
 import Header from "./Header/Header";
-import axios from "axios";
 
-const mythologyUrl = "https://mythology-api.herokuapp.com/list";
 
 class App extends Component {
   constructor() {
@@ -13,38 +11,15 @@ class App extends Component {
       data: null
     };
   }
-
-  componentDidMount() {
-    axios.get(mythologyUrl).then(res => {
-      this.setState({ data: res.data });
-      console.log(res);
-      console.log(this.state.data);
-    });
-  }
-
-  render() {
-    if (this.state.data == null) {
-      return (
-        <Container className="App">
-          {Header}
-          <div className="App-header">
-            <p>Hello World.</p>
-          </div>
-        </Container>
-      );
-    } else {
-      return (
-        <Container className="App">
-          <Header />
-          <div className="App-header">
-            <p>{this.state.data[3].en_name}</p>
-            <p>{this.state.data[3].desc}</p>
-            {/* <img src= {this.state.data[3].thumbnail}></img> */}
-          </div>
-        </Container>
-      );
-    }
-  }
+render(){
+  return (
+    <Container className="App">
+      <Header />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Virgil_.jpg"></img>
+    </Container>
+  );
+}
+  
 }
 
 export default App;

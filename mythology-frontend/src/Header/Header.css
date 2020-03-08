@@ -1,14 +1,17 @@
 .toolbar {
   border-bottom: 1px solid grey;
-}
-.toolbarTitle {
-  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  padding: 0;
+  text-align: center;
 }
 .toolbarSecondary {
   justify-content: space-between;
   overflow-x: auto;
 }
-.toolbarLink {
-  padding: 1px;
-  flex-shrink: 0;
+.toolbarTitle {
+  font-size: 40px;
 }
