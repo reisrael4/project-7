@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Container from "@material-ui/core/Container";
-import Header from "../Header/Header";
 import "./Works.css";
 
 const mythologyUrl = "https://mythology-api.herokuapp.com/list";
@@ -14,18 +13,24 @@ class Works extends Component {
     };
   }
   componentDidMount() {
-    axios.get(mythologyUrl).then(res => {
-      this.setState({ data: res.data });
-      console.log(res);
-      console.log(this.state.data);
-    });
+    fetch(mythologyUrl)
+      .then(res => {
+        return res.json;
+      })
+      .then(res => {
+        this.setState({ data: res.data });
+        console.log(res);
+        console.log(this.state.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   render() {
     if (this.state.data == null) {
       return (
         <Container className="entity">
-          {Header}
           <div className="entity-content">
             <p>Hello World.</p>
           </div>
@@ -36,7 +41,6 @@ class Works extends Component {
         if (entity.works.includes("georgics")) {
           return (
             <Container className="entity" key={entity.works}>
-              <Header />
               <div className="entity-content">
                 <p>{entity.en_name}</p>
                 <p>{entity.desc}</p>
@@ -48,7 +52,6 @@ class Works extends Component {
         if (entity.works.includes("eclogues")) {
           return (
             <Container className="entity" key={entity.works}>
-              <Header />
               <div className="entity-content">
                 <p>{entity.en_name}</p>
                 <p>{entity.desc}</p>
@@ -60,7 +63,6 @@ class Works extends Component {
         if (entity.works.includes("aeneid")) {
           return (
             <Container className="entity" key={entity.works}>
-              <Header />
               <div className="entity-content">
                 <p>{entity.en_name}</p>
                 <p>{entity.desc}</p>
@@ -69,10 +71,9 @@ class Works extends Component {
             </Container>
           );
         }
-        if (entity.works == []) {
+        if (entity.works.length === 0) {
           return (
             <Container className="entity" key={entity.works}>
-              <Header />
               <div className="entity-content">
                 <p>{entity.en_name}</p>
                 <p>{entity.desc}</p>
@@ -83,6 +84,7 @@ class Works extends Component {
         }
       });
     }
+    return <div>"I'm trying"</div>;
   }
 }
 
