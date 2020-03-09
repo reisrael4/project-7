@@ -12,11 +12,11 @@ class App extends Component {
       <Container>
         <Header />
         <main>
-          <Route path="/" component={Home} />
-          <Route path="/list/work/georgics" component={Works} />
-          <Route path="/list/work/eclogues" component={Works} />
-          <Route path="/list/work/aeneid" component={Works} />
-          <Route path="/list/work/unaffiliated" component={Works} />
+          <Route path="/" exact component={Home} />
+          <Route path="/list/work/georgics" exact component={Works} />
+          <Route path="/list/work/eclogues" exact component={Works} />
+          <Route path="/list/work/aeneid" exact component={Works} />
+          <Route path="/list/work/unaffiliated" exact component={Works} />
         </main>
       </Container>
     );
